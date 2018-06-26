@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sino.commens.login.dao.AdminLoginMapper" >
+ 
+	<!--     判断是否登录 -->
+	  <select id="getAdminLogin" parameterType="HashMap" resultType="com.sino.commens.login.domain.AdminInfo" >
+	  	SELECT um_user_id adminId,um_user_pwd adminName FROM pub_user_oper_privs where um_user_id= #{adminId}
+	  </select>
+	  <insert id="insert1">
+	  	INSERT INTO `erp_um`.`test1` (`id`) VALUES (1);
+	  </insert>
+	  <insert id="insert2"  >
+	  	INSERT INTO `erp_um`.`test2` (`dd`) VALUES (null);
+	  </insert>
+	
+	  
+</mapper>
